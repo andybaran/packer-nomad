@@ -7,7 +7,7 @@ client {
   node_pool = "default" #change this if youre using node pools
 
   server_join {
-    retry_join = ["provider=aws tag_key=NomadType tag_value=server"]
+    retry_join = ["provider=aws tag_key=NomadType tag_value=client"]
   }
 }
 
