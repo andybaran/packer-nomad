@@ -25,14 +25,6 @@ sudo apt-get install -y unzip
 sudo echo "Creating Nomad user"
 sudo useradd --system --home /etc/nomad.d --shell /bin/false nomad
 
-# sudo echo "Installing Podman..."
-# sudo touch /etc/{subgid,subuid}
-# sudo usermod --add-subuids 100000-165535 --add-subgids 100000-165535 ${OS_USER}
-# sudo grep ${OS_USER} /etc/subuid /etc/subgid
-# sudo apt-get install -y podman
-# sudo podman system service -t 0 &
-# sudo echo "Done!"
-
 sudo echo "Installing Nomad"
 sudo curl --silent --remote-name "https://releases.hashicorp.com/nomad/${NOMAD_VERSION}+ent/nomad_${NOMAD_VERSION}+ent_linux_amd64.zip"
 sudo unzip "nomad_${NOMAD_VERSION}+ent_linux_amd64.zip"

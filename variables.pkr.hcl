@@ -1,20 +1,6 @@
 variable "nomad_ver" {
   type = string
-}
-
-variable "os_user" {
-  type    = string
-  default = "nomad"
-}
-
-variable "os_password" {
-  type    = string
-  default = "nomad"
-}
-
-variable "enterprise" {
-  type    = bool
-  default = false
+  default = "1.7.3"
 }
 
 variable "license" {
@@ -25,4 +11,9 @@ variable "license" {
 variable "nomad_config" {
   type    = string
   default = "nomad.pkrtpl.hcl"
+}
+
+variable "region" {
+  type = string
+  default = "us-east-2"
 }

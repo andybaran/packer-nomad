@@ -1,0 +1,2 @@
+# Nomad client Packer image information
+nomad_ver        = "1.7.3"

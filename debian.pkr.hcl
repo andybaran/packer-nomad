@@ -10,9 +10,9 @@ packer {
 source "amazon-ebs" "nomad" {
   ami_name              = "nomad-${var.nomad_ver}"
   instance_type         = "t2.medium"
-  region                = "us-east-2"
-  source_ami            = "ami-0ec3d9efceafb89e0" #debian
-  ssh_username          = "admin" #debian
+  region                = var.region
+  source_ami            = "ami-0ec3d9efceafb89e0"
+  ssh_username          = "admin"
   force_deregister      = true
   force_delete_snapshot = true
 
@@ -58,8 +58,6 @@ build {
     script            = "./post.sh"
     environment_vars = [
       "NOMAD_VERSION=${var.nomad_ver}",
-      "OS_USER=${var.os_user}",
-      "ENTERPRISE=${var.enterprise}",
     ]
   }
 

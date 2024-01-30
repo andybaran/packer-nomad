@@ -32,14 +32,6 @@ plugin "raw_exec" {
   }
 }
 
-plugin "nomad-driver-podman" {
-	config {
-		volumes {
-			enabled = true
-		}
-	}
-}
-
 telemetry {
   collection_interval = "1s"
   disable_hostname = true
